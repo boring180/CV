@@ -1,0 +1,112 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ReCeiVe
+% LuaLaTeX Template
+% Version 1.12.0 (10/10/2020)
+%
+% Original authors:
+% Ged Lex (gedlex@hotmail.ch)
+%
+% Important note:
+% This template must be compiled with LuaLaTeX, the below lines will ensure this
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+\documentclass[rightPos]{ReCeiVe}      % By default, use 'letterpaper' for US letter
+\geometry[5cm]{left=1.75cm, right=1.75cm, top=1.5cm, bottom=1.5cm, footskip=.6cm, headsep=.5cm}
+%\geometry{letterpaper, % paper size
+%          left=1.75cm, right=1.75cm, top=1.5cm, bottom=1.5cm, footskip=.6cm, headsep=.5cm, % margins
+%          showframe}                  % show geometry frame
+%          heightrounded}              % avoid underfull vbox warning
+          
+% Color for highlights
+%\definecolor{highlight}{HTML}{EB9534} % Specify your own color
+%\colorlet{highlight}{white}           % Set predefined color
+% Default colors include: darkgray, gray, lightgray, lightblue, orange, red, concrete
+
+% Colors for text - uncomment and modify
+%\definecolor{darktext}{HTML}{414141}
+%\definecolor{text}{HTML}{414141}
+%\definecolor{graytext}{HTML}{414141}
+%\definecolor{lighttext}{HTML}{414141}
+
+\usepackage{multicol}
+
+% Chinese font support for LuaLaTeX
+\usepackage{luatexja-fontspec}
+% Set Chinese font - using Songti SC (宋体简体) which is available on macOS
+\setmainjfont{Songti SC}
+
+%----------------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%----------------------------------------------------------------------------------------
+\background{pics/background5.pdf}
+\photo[circle,edge,fill,left]{2.5cm}{pics/me.jpg}
+\name{许博容}{Xu Borong}
+% \address{Turicum, Switzerland}
+\mobile{+86 13718127772}
+\email{borongxu@outlook.com}
+\github{boring180}
+\linkedin{borong-xu-52829a293}
+\homepage{boring180-github-io.vercel.app/}
+%\twitter{@twit}
+%\xing{xing name}
+%\stackoverflow{SOid}{SOname}
+%\skype{skypeid}
+%\reddit{reddit account}
+%\extrainfo{info}
+
+\position{计算机工程学士} % Your expertise/fields
+\headwords{计算机工程学生，STEM教育者} % A few headwords to describe yourself
+% \quote{"Some men see things as they are, and ask why. I dream of things that never were, and ask why not." - Robert Kennedy} % A quote or statement
+
+%----------------------------------------------------------------------------------------
+%	SIDEBAR CONTENT
+%	Fill in the information you would like to add to your sidebar
+%----------------------------------------------------------------------------------------
+
+\aboutMe{机器人与机器学习学生，STEM教育者}
+\userSection[技能]{
+\begin{itemize}
+    \item C/C++
+    \item Python
+    \item ROS Noetic/Foxy/Humble
+\end{itemize}
+}
+% \skillset[title/Hi]{MATLAB/.,Python/.4,VBA/.6,Java/.2,C++/.4}
+\languages{{英语/流利 (雅思 7.5)},{中文/母语}}
+% \hobbies{Lorem ipsum dolor sit amet, consectetur adipiscing elit}
+% \nonProfit{%
+% 	\begin{itemize}
+% 	\item{Lorem ipsum dolor sit amet}
+% 	\item{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec finibus eu felis ullamcorper finibus.}
+% 	\end{itemize}
+% }
+% Usage: \userSection[<section title>]{<content>}
+
+%----------------------------------------------------------------------------------------
+\begin{document}
+% Print the header
+% Usage: \makecvheader[<position>]
+\makecvheader[L]
+% Print the sidebar
+% Usage: \makecvsidebar[xOffset/value,yOffset/value,noRadius|radius]
+\makecvsidebar
+
+%----------------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in order to modify it
+%----------------------------------------------------------------------------------------
+\input{cvSections_ch/education.tex}
+\input{cvSections_ch/professionalExperience.tex}
+\input{cvSections_ch/honors.tex}
+
+%----------------------------------------------------------------------------------------
+% Usage: \makecvfooter(<left>}{<center>}{<right>)
+\makecvfooter{\today}{许博容~~~·~~~简历}{\LaTeX{}}
+\end{document}
+
