@@ -37,8 +37,19 @@
 
 % Chinese font support for LuaLaTeX
 \usepackage{luatexja-fontspec}
-% Set Chinese font - using Songti SC (宋体简体) which is available on macOS
-\setmainjfont{Songti SC}
+% Chinese fonts, both macOS system fonts: Songti SC (宋体简体) for body text,
+% Heiti SC (黑体简体) wherever ReCeiVe.cls asks for \bfseries. Songti's own bold
+% is far too light next to Source Sans Pro Bold, so section titles and entry
+% titles used to change weight halfway through lines like "香港科技大学 (HKUST)".
+\setmainjfont{Songti SC}[
+  UprightFont     = {Songti SC Regular},
+  BoldFont        = {Heiti SC Medium},
+  ItalicFont      = {Songti SC Regular},   % no italic Chinese; avoid a fake slant
+  BoldItalicFont  = {Heiti SC Medium},
+]
+% Space inserted between Chinese and Latin/digits. The 0.25em default makes dates
+% such as "2026 年 6 月毕业" sprawl; 0.15em keeps the word gap visible but tight.
+\ltjsetparameter{xkanjiskip=.15\zw plus .05\zw minus .05\zw}
 
 %----------------------------------------------------------------------------------------
 %	PERSONAL INFORMATION
